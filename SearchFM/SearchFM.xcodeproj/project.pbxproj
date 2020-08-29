@@ -41,6 +41,8 @@
 		1F70CCC424FAA70B00D1A3E5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCB224FA7A3A00D1A3E5 /* SearchTableViewCell.swift */; };
 		1F70CCC524FAA72300D1A3E5 /* Common+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CC9624FA548E00D1A3E5 /* Common+Extension.swift */; };
 		1F70CCC624FAA84C00D1A3E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F70CC6D24FA294A00D1A3E5 /* Main.storyboard */; };
+		1F70CCC824FAAE8B00D1A3E5 /* SearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCC724FAAE8B00D1A3E5 /* SearchInteractorTests.swift */; };
+		1F70CCCA24FAAFAA00D1A3E5 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCC924FAAFAA00D1A3E5 /* SearchPresenterTests.swift */; };
 		55095EE5D1FD54F69B21187C /* Pods_SearchFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4BF5C405C31B0559999912 /* Pods_SearchFMTests.framework */; };
 		C45F6BD010BC5F55E207EB44 /* Pods_SearchFM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944159967EF804F46537E268 /* Pods_SearchFM.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,8 @@
 		1F70CCB424FA936C00D1A3E5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1F70CCB624FAA0F600D1A3E5 /* SearchFMTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SearchFMTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		1F70CCB724FAA0F600D1A3E5 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		1F70CCC724FAAE8B00D1A3E5 /* SearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTests.swift; sourceTree = "<group>"; };
+		1F70CCC924FAAFAA00D1A3E5 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
 		3C46BC1D5DAB2385D6B93A4E /* Pods-SearchFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchFMTests.debug.xcconfig"; path = "Target Support Files/Pods-SearchFMTests/Pods-SearchFMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B3A3DB029C64FDAEBD4C36E /* Pods-SearchFMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchFMTests.release.xcconfig"; path = "Target Support Files/Pods-SearchFMTests/Pods-SearchFMTests.release.xcconfig"; sourceTree = "<group>"; };
 		944159967EF804F46537E268 /* Pods_SearchFM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchFM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,8 @@
 			children = (
 				1F70CC8024FA294D00D1A3E5 /* Info.plist */,
 				1F70CCB724FAA0F600D1A3E5 /* SearchViewControllerTests.swift */,
+				1F70CCC724FAAE8B00D1A3E5 /* SearchInteractorTests.swift */,
+				1F70CCC924FAAFAA00D1A3E5 /* SearchPresenterTests.swift */,
 				1F70CCB624FAA0F600D1A3E5 /* SearchFMTests-Bridging-Header.h */,
 			);
 			path = SearchFMTests;
@@ -432,8 +438,10 @@
 				1F70CCB824FAA0F600D1A3E5 /* SearchViewControllerTests.swift in Sources */,
 				1F70CCC524FAA72300D1A3E5 /* Common+Extension.swift in Sources */,
 				1F70CCBA24FAA2D400D1A3E5 /* SearchModels.swift in Sources */,
+				1F70CCCA24FAAFAA00D1A3E5 /* SearchPresenterTests.swift in Sources */,
 				1F70CCC124FAA6C900D1A3E5 /* DetailsInteractor.swift in Sources */,
 				1F70CCBF24FAA6BB00D1A3E5 /* SearchRouter.swift in Sources */,
+				1F70CCC824FAAE8B00D1A3E5 /* SearchInteractorTests.swift in Sources */,
 				1F70CCC324FAA6F900D1A3E5 /* AlertViewController.swift in Sources */,
 				1F70CCC424FAA70B00D1A3E5 /* SearchTableViewCell.swift in Sources */,
 				1F70CCBB24FAA47300D1A3E5 /* SearchtInteractor.swift in Sources */,
