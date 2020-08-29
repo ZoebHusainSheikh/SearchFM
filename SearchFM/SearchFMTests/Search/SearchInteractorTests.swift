@@ -43,10 +43,10 @@ class SearchInteractorTests: XCTestCase {
     
     class SearchPresentationLogicSpy: SearchPresentationLogic
     {
-        var presentContactsCalled = false
+        var presentRecordssCalled = false
         
         func present(response: Search.Fetch.Response) {
-            presentContactsCalled = true
+            presentRecordssCalled = true
         }
     }
     
@@ -63,6 +63,6 @@ class SearchInteractorTests: XCTestCase {
         sut.fetch(request: request)
         
         // Then
-        XCTAssertTrue(spy.presentContactsCalled, "fetch(request:) should ask the presenter to format the result")
+        XCTAssertTrue(spy.presentRecordssCalled, "fetch(request:) should ask the presenter to format the result")
     }
 }

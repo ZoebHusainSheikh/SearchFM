@@ -52,12 +52,6 @@ class SearchPresenterTests: XCTestCase {
         func stopAnimation() {
             stopAnimationCalled = true
         }
-        
-        var refreshSearchCalled = false
-        
-        func refreshSearch() {
-            refreshSearchCalled = true
-        }
     }
     
     // MARK: Tests
