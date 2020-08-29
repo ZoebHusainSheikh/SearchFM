@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h30-Bc-Cd0">
-                                <rect key="frame" x="30" y="278" width="315" height="111"/>
+                                <rect key="frame" x="30" y="224" width="315" height="119.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="S">
                                         <attributes>
@@ -88,7 +88,7 @@
                         <constraints>
                             <constraint firstItem="h30-Bc-Cd0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="7hg-V5-3sF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h30-Bc-Cd0" secondAttribute="trailing" constant="30" id="Ze0-mE-wDm"/>
-                            <constraint firstItem="h30-Bc-Cd0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cdF-eb-XA6"/>
+                            <constraint firstItem="h30-Bc-Cd0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="cdF-eb-XA6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

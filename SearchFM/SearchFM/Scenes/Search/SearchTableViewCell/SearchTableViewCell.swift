@@ -25,6 +25,13 @@ class SearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        titleLabel.text = nil
+        subtitleLabel.text = nil
+        recordImageView.image = nil
+        super.prepareForReuse()
+    }
+    
     func setup(by record: Record) {
         titleLabel.text = record.name
         subtitleLabel.isHidden = true

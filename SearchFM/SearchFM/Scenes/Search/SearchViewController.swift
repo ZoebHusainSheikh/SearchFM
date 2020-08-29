@@ -98,7 +98,7 @@ private extension SearchViewController {
     // MARK: Search API
     
     func performSearchAPI(with type: SearchType) {
-        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+        guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), !searchText.isEmpty else { return }
         
         showProgressHUD()
         let url: String = type.url(for: searchText)
