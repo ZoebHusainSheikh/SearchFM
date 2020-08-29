@@ -7,6 +7,8 @@ target 'SearchFM' do
 
   # Pods for SearchFM
     pod 'SDWebImage'
+    pod 'MBProgressHUD'
+    pod 'IQKeyboardManagerSwift'
 
   target 'SearchFMTests' do
     inherit! :search_paths

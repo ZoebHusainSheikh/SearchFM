@@ -15,60 +15,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h30-Bc-Cd0">
-                                <rect key="frame" x="86" y="308" width="203.5" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h30-Bc-Cd0">
+                                <rect key="frame" x="30" y="278" width="315" height="111"/>
                                 <attributedString key="attributedText">
                                     <fragment content="S">
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="NSColor" red="1" green="0.054604973591549297" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="e">
                                         <attributes>
                                             <color key="NSColor" red="0.10035211267605634" green="0.054604973591549297" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="a">
                                         <attributes>
                                             <color key="NSColor" red="0.010861021731886744" green="1" blue="0.11475458352276569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="r">
                                         <attributes>
-                                            <color key="NSColor" red="0.25328592838072872" green="0.24650737480305907" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <color key="NSColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="c">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="h">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.043268475791268024" blue="0.0079122403403328878" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" ">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="F">
                                         <attributes>
                                             <color key="NSColor" red="0.97144848108291626" green="0.014844317920506001" blue="0.93773192167282104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="M">
                                         <attributes>
-                                            <color key="NSColor" red="0.93783432245254517" green="0.7226375937461853" blue="0.80632692575454712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="46"/>
+                                            <color key="NSColor" red="0.97566944360733032" green="0.052524067461490631" blue="0.31546163558959961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="100"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -77,7 +86,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="h30-Bc-Cd0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Jn9-3M-7Xo"/>
+                            <constraint firstItem="h30-Bc-Cd0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="7hg-V5-3sF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h30-Bc-Cd0" secondAttribute="trailing" constant="30" id="Ze0-mE-wDm"/>
                             <constraint firstItem="h30-Bc-Cd0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cdF-eb-XA6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

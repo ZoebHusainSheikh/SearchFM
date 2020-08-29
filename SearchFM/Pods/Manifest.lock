@@ -1,18 +1,26 @@
 PODS:
+  - IQKeyboardManagerSwift (6.5.6)
+  - MBProgressHUD (1.2.0)
   - SDWebImage (5.9.0):
     - SDWebImage/Core (= 5.9.0)
   - SDWebImage/Core (5.9.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - MBProgressHUD
   - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManagerSwift
+    - MBProgressHUD
     - SDWebImage
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
 
-PODFILE CHECKSUM: d95a20f1ae7c1219ce6cd2942fcad301a84ba63c
+PODFILE CHECKSUM: 997e9467831dc500210eed9fa2f199640228017f
 
 COCOAPODS: 1.9.3
