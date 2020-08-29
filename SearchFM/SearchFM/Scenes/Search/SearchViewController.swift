@@ -17,6 +17,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var interactor: SearchBusinessLogic?
@@ -96,6 +97,7 @@ private extension SearchViewController {
         guard let searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), !searchText.isEmpty else { return }
         
         showProgressHUD()
+        self.messageLabel.isHidden = true
         let url: String = type.url(for: searchText)
         let request = Search.Fetch.Request(url: url)
         interactor?.fetch(request: request)
@@ -122,9 +124,12 @@ extension SearchViewController: SearchDisplayLogic {
         }
         
         DispatchQueue.main.async {[weak self] in
-            self?.tableView.isHidden = false
-            self?.tableView.reloadData()
-            self?.view.endEditing(true)
+            if let records = self?.records {
+                self?.tableView.isHidden = records.count == 0
+                self?.messageLabel.isHidden = records.count > 0
+                self?.tableView.reloadData()
+                self?.view.endEditing(true)
+            }
         }
     }
     

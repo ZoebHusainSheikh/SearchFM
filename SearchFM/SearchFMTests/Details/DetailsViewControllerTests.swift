@@ -2,7 +2,7 @@
 //  DetailsViewControllerTests.swift
 //  SearchFMTests
 //
-//  Created by mymac on 29/08/20.
+//  Created by Zoeb Husain Sheikh on 29/08/20.
 //
 
 import XCTest

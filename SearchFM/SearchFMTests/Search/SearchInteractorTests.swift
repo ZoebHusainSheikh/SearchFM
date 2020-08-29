@@ -2,7 +2,7 @@
 //  SearchInteractorTests.swift
 //  SearchFMTests
 //
-//  Created by mymac on 29/08/20.
+//  Created by Zoeb Husain Sheikh on 29/08/20.
 //
 
 import XCTest
@@ -52,7 +52,7 @@ class SearchInteractorTests: XCTestCase {
     
     // MARK: Tests
     
-    func testFetchContact()
+    func testFetchRequest()
     {
         // Given
         let spy = SearchPresentationLogicSpy()

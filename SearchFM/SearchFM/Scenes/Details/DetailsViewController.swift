@@ -71,8 +71,11 @@ extension DetailsViewController: DetailsDisplayLogic {
     
     func display(record: Record) {
         self.nameLabel.text = record.name
+        let placeholderImage = UIImage(named: "placeholderImage")
         if let url: URL = record.displayImageURL {
-            self.imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage"))
+            self.imageView.sd_setImage(with: url, placeholderImage: placeholderImage)
+        } else {
+            self.imageView.image = placeholderImage
         }
         
         if let urlPath = record.url, let url: URL = URL(string: urlPath) {

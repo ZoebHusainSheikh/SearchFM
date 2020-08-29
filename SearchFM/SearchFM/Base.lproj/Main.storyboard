@@ -98,11 +98,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="LIM-b6-zQd"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type 'Keyword' in the search bar and then tap enter button to get the Results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBc-Gv-mUu" userLabel="MessageLabel">
+                                <rect key="frame" x="30" y="296" width="315" height="75.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="OX2-63-KWL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2WH-k6-EYF"/>
                             <constraint firstItem="9dv-Ee-ZSj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3cf-Sa-FkO"/>
+                            <constraint firstItem="YBc-Gv-mUu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9Od-SF-Jkg"/>
+                            <constraint firstItem="YBc-Gv-mUu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HTJ-0F-EcA"/>
                             <constraint firstItem="UNw-hc-jir" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JKu-ge-Q0x"/>
                             <constraint firstItem="OX2-63-KWL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Osl-Cq-xbH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UNw-hc-jir" secondAttribute="trailing" id="Wat-ii-l7H"/>
@@ -111,11 +119,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UNw-hc-jir" secondAttribute="bottom" id="kfM-Fc-Yr7"/>
                             <constraint firstItem="OX2-63-KWL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ltC-nE-xem"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9dv-Ee-ZSj" secondAttribute="trailing" id="uAt-FL-era"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YBc-Gv-mUu" secondAttribute="trailing" constant="30" id="uPe-oc-OBr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="xR5-No-bFk"/>
                     <connections>
+                        <outlet property="messageLabel" destination="YBc-Gv-mUu" id="KcF-Np-Ox7"/>
                         <outlet property="searchBar" destination="OX2-63-KWL" id="jpI-3I-bhN"/>
                         <outlet property="segmentControl" destination="9dv-Ee-ZSj" id="BDf-bO-oow"/>
                         <outlet property="tableView" destination="UNw-hc-jir" id="wa9-6m-5Wz"/>
