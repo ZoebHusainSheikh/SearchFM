@@ -43,6 +43,9 @@
 		1F70CCC624FAA84C00D1A3E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F70CC6D24FA294A00D1A3E5 /* Main.storyboard */; };
 		1F70CCC824FAAE8B00D1A3E5 /* SearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCC724FAAE8B00D1A3E5 /* SearchInteractorTests.swift */; };
 		1F70CCCA24FAAFAA00D1A3E5 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCC924FAAFAA00D1A3E5 /* SearchPresenterTests.swift */; };
+		1F70CCCC24FAB0FB00D1A3E5 /* DetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCCB24FAB0FB00D1A3E5 /* DetailsViewControllerTests.swift */; };
+		1F70CCCE24FAB6FC00D1A3E5 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCCD24FAB6FC00D1A3E5 /* DetailsPresenter.swift */; };
+		1F70CCCF24FAB6FC00D1A3E5 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CCCD24FAB6FC00D1A3E5 /* DetailsPresenter.swift */; };
 		55095EE5D1FD54F69B21187C /* Pods_SearchFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4BF5C405C31B0559999912 /* Pods_SearchFMTests.framework */; };
 		C45F6BD010BC5F55E207EB44 /* Pods_SearchFM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944159967EF804F46537E268 /* Pods_SearchFM.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +89,8 @@
 		1F70CCB724FAA0F600D1A3E5 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		1F70CCC724FAAE8B00D1A3E5 /* SearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTests.swift; sourceTree = "<group>"; };
 		1F70CCC924FAAFAA00D1A3E5 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		1F70CCCB24FAB0FB00D1A3E5 /* DetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		1F70CCCD24FAB6FC00D1A3E5 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		3C46BC1D5DAB2385D6B93A4E /* Pods-SearchFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchFMTests.debug.xcconfig"; path = "Target Support Files/Pods-SearchFMTests/Pods-SearchFMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B3A3DB029C64FDAEBD4C36E /* Pods-SearchFMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchFMTests.release.xcconfig"; path = "Target Support Files/Pods-SearchFMTests/Pods-SearchFMTests.release.xcconfig"; sourceTree = "<group>"; };
 		944159967EF804F46537E268 /* Pods_SearchFM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchFM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +173,7 @@
 				1F70CCB724FAA0F600D1A3E5 /* SearchViewControllerTests.swift */,
 				1F70CCC724FAAE8B00D1A3E5 /* SearchInteractorTests.swift */,
 				1F70CCC924FAAFAA00D1A3E5 /* SearchPresenterTests.swift */,
+				1F70CCCB24FAB0FB00D1A3E5 /* DetailsViewControllerTests.swift */,
 				1F70CCB624FAA0F600D1A3E5 /* SearchFMTests-Bridging-Header.h */,
 			);
 			path = SearchFMTests;
@@ -219,6 +225,7 @@
 			children = (
 				1F70CC9F24FA603B00D1A3E5 /* DetailsViewController.swift */,
 				1F70CCA124FA60D400D1A3E5 /* DetailsInteractor.swift */,
+				1F70CCCD24FAB6FC00D1A3E5 /* DetailsPresenter.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -425,6 +432,7 @@
 				1F70CCA224FA60D400D1A3E5 /* DetailsInteractor.swift in Sources */,
 				1F70CCA024FA603B00D1A3E5 /* DetailsViewController.swift in Sources */,
 				1F70CCB024FA6A7400D1A3E5 /* Constants.swift in Sources */,
+				1F70CCCE24FAB6FC00D1A3E5 /* DetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F70CCBC24FAA6AB00D1A3E5 /* Constants.swift in Sources */,
+				1F70CCCC24FAB0FB00D1A3E5 /* DetailsViewControllerTests.swift in Sources */,
 				1F70CCB924FAA26500D1A3E5 /* SearchViewController.swift in Sources */,
 				1F70CCC024FAA6C600D1A3E5 /* DetailsViewController.swift in Sources */,
 				1F70CCB824FAA0F600D1A3E5 /* SearchViewControllerTests.swift in Sources */,
@@ -448,6 +457,7 @@
 				1F70CCBD24FAA6B500D1A3E5 /* SearchWorker.swift in Sources */,
 				1F70CCC224FAA6EA00D1A3E5 /* NetworkHttpClient.swift in Sources */,
 				1F70CCBE24FAA6B800D1A3E5 /* SearchPresenter.swift in Sources */,
+				1F70CCCF24FAB6FC00D1A3E5 /* DetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

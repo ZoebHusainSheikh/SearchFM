@@ -62,7 +62,7 @@ class SearchViewController: UIViewController {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableView.automaticDimension
+        initialiseView()
     }
 }
 
@@ -79,6 +79,11 @@ private extension SearchViewController {
     var searchTab: SearchType {
         let selectedTabIndex = segmentControl.selectedSegmentIndex
         return SearchType(rawValue: selectedTabIndex) ?? .artist
+    }
+    
+    func initialiseView() {
+        tableView.rowHeight = UITableView.automaticDimension
+        searchBar.becomeFirstResponder()
     }
     
     func performSearchAction() {
@@ -107,20 +112,21 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: SearchDisplayLogic {
     
     func display(viewModel: Search.Fetch.ViewModel) {
-        switch searchTab {
-        case .artist:
-            self.records = viewModel.results?.artistMatches?.artists
-        case .album:
-            self.records = viewModel.results?.albumMatches?.albums
-        case .track:
-            self.records = viewModel.results?.trackMatches?.tracks
-        }
-        
-        
-        DispatchQueue.main.async {
-            self.tableView.isHidden = false
-            self.tableView.reloadData()
-            self.view.endEditing(true)
+        DispatchQueue.main.async {[weak self] in
+            switch self?.searchTab {
+            case .artist:
+                self?.records = viewModel.results?.artistMatches?.artists
+            case .album:
+                self?.records = viewModel.results?.albumMatches?.albums
+            case .track:
+                self?.records = viewModel.results?.trackMatches?.tracks
+            case .none:
+                break
+            }
+            
+            self?.tableView.isHidden = false
+            self?.tableView.reloadData()
+            self?.view.endEditing(true)
         }
     }
     

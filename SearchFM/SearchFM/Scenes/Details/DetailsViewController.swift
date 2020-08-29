@@ -9,13 +9,17 @@ import UIKit
 import SDWebImage
 import WebKit
 
+protocol DetailsDisplayLogic: class
+{
+    func display(record: Record)
+}
+
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var webView: WKWebView!
     
-    var record: Record?
     var interactor: DetailsBusinessLogic?
 
     // MARK: Object lifecycle
@@ -39,6 +43,9 @@ class DetailsViewController: UIViewController {
         let viewController = self
         let interactor = DetailsInteractor()
         viewController.interactor = interactor
+        let presenter = DetailsPresenter()
+        interactor.presenter = presenter
+        presenter.viewController = viewController
     }
     
     // MARK: View lifecycle
@@ -55,14 +62,23 @@ private extension DetailsViewController {
     func initialiseView() {
         guard let record = interactor?.record else { return }
         
-        nameLabel.text = record.name
-        if let url: URL = record.displayImageURL {
-            imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage"))
-        }
-        
-        if let urlPath = record.url, let url: URL = URL(string: urlPath) {
-            webView.load(URLRequest(url: url))
-        }
+        interactor?.display(record: record)
     }
     
+}
+
+extension DetailsViewController: DetailsDisplayLogic {
+    
+    func display(record: Record) {
+        DispatchQueue.main.async {
+            self.nameLabel.text = record.name
+            if let url: URL = record.displayImageURL {
+                self.imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage"))
+            }
+            
+            if let urlPath = record.url, let url: URL = URL(string: urlPath) {
+                self.webView.load(URLRequest(url: url))
+            }
+        }
+    }
 }
