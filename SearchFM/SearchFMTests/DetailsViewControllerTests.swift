@@ -50,16 +50,22 @@ class DetailsViewControllerTests: XCTestCase {
         RunLoop.current.run(until: Date())
     }
     
-    // MARK: Test doubles
+    // MARK: Test
     
     class DetailsBusinessLogicSpy: DetailsBusinessLogic
     {
+        var displayRecordsCalled = false
+        
+        func display(record: Record) {
+            displayRecordsCalled = true
+        }
+        
         var record: Record?
     }
     
     // MARK: Tests
     
-    func testDisplayRecordDetails()
+    func testShouldDisplayRecords()
     {
         // Given
         let spy = DetailsBusinessLogicSpy()
@@ -68,6 +74,19 @@ class DetailsViewControllerTests: XCTestCase {
         
         // When
         loadView()
+        
+        // Then
+        XCTAssertTrue(spy.displayRecordsCalled, "viewDidLoad() should ask the interactor to display records")
+    }
+    
+    func testDisplayRecordDetails()
+    {
+        // Given
+        let record = mockRecords.first!
+        
+        // When
+        loadView()
+        sut.display(record:record)
         
         // Then
         XCTAssertEqual(sut.nameLabel.text, "Making Music", "viewDidLoad() should update the name label text")

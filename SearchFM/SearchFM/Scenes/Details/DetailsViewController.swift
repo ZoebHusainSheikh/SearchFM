@@ -70,15 +70,13 @@ private extension DetailsViewController {
 extension DetailsViewController: DetailsDisplayLogic {
     
     func display(record: Record) {
-        DispatchQueue.main.async {
-            self.nameLabel.text = record.name
-            if let url: URL = record.displayImageURL {
-                self.imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage"))
-            }
-            
-            if let urlPath = record.url, let url: URL = URL(string: urlPath) {
-                self.webView.load(URLRequest(url: url))
-            }
+        self.nameLabel.text = record.name
+        if let url: URL = record.displayImageURL {
+            self.imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage"))
+        }
+        
+        if let urlPath = record.url, let url: URL = URL(string: urlPath) {
+            self.webView.load(URLRequest(url: url))
         }
     }
 }

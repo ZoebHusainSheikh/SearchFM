@@ -21,22 +21,22 @@ class SearchPresenter: SearchPresentationLogic
     
     func present(response: Search.Fetch.Response)
     {
-        if let dataResponse = response.data {
-            do {
-                //here dataResponse received from a network request
-                let decoder = JSONDecoder()
-                let model = try decoder.decode(SearchResponse.self, from:
-                    dataResponse) //Decode JSON Response Data
-                let results = model.results
-                self.viewController?.display(viewModel: Search.Fetch.ViewModel(results: results))
-                self.viewController?.stopAnimation()
-            } catch let parsingError {
-                print("Error", parsingError)
-                self.viewController?.stopAnimation()
-                AlertViewController.sharedInstance.alertWindow(message: parsingError.localizedDescription)
-            }
-        } else {
-            DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.async {[weak self] in
+            if let dataResponse = response.data {
+                do {
+                    //here dataResponse received from a network request
+                    let decoder = JSONDecoder()
+                    let model = try decoder.decode(SearchResponse.self, from:
+                        dataResponse) //Decode JSON Response Data
+                    let results = model.results
+                    self?.viewController?.display(viewModel: Search.Fetch.ViewModel(results: results))
+                    self?.viewController?.stopAnimation()
+                } catch let parsingError {
+                    print("Error", parsingError)
+                    self?.viewController?.stopAnimation()
+                    AlertViewController.sharedInstance.alertWindow(message: parsingError.localizedDescription)
+                }
+            } else {
                 self?.viewController?.stopAnimation()
             }
         }

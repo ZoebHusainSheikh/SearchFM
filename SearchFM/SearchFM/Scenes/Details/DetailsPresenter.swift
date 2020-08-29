@@ -20,6 +20,8 @@ class DetailsPresenter: DetailsPresentationLogic
     
     func present(record: Record)
     {
-       self.viewController?.display(record: record)
+        DispatchQueue.main.async {
+            self.viewController?.display(record: record)
+        }
     }
 }

@@ -112,18 +112,16 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: SearchDisplayLogic {
     
     func display(viewModel: Search.Fetch.ViewModel) {
+        switch self.searchTab {
+        case .artist:
+            self.records = viewModel.results?.artistMatches?.artists
+        case .album:
+            self.records = viewModel.results?.albumMatches?.albums
+        case .track:
+            self.records = viewModel.results?.trackMatches?.tracks
+        }
+        
         DispatchQueue.main.async {[weak self] in
-            switch self?.searchTab {
-            case .artist:
-                self?.records = viewModel.results?.artistMatches?.artists
-            case .album:
-                self?.records = viewModel.results?.albumMatches?.albums
-            case .track:
-                self?.records = viewModel.results?.trackMatches?.tracks
-            case .none:
-                break
-            }
-            
             self?.tableView.isHidden = false
             self?.tableView.reloadData()
             self?.view.endEditing(true)

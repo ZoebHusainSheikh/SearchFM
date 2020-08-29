@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="Search_FM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="SearchFMTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="144" width="375" height="523"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableViewCell" rowHeight="70" id="5UX-S4-Ix5" customClass="SearchTableViewCell" customModule="Search_FM" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableViewCell" rowHeight="70" id="5UX-S4-Ix5" customClass="SearchTableViewCell" customModule="SearchFMTests" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5UX-S4-Ix5" id="hCk-C7-6bn">
@@ -128,7 +128,7 @@
         <!--Details-->
         <scene sceneID="bJl-Cn-Bo2">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" title="Details" id="15z-fx-QeZ" customClass="DetailsViewController" customModule="Search_FM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" title="Details" id="15z-fx-QeZ" customClass="DetailsViewController" customModule="SearchFMTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bDI-Vs-COG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,7 @@
                                 </constraints>
                             </view>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHo-A0-6dG">
-                                <rect key="frame" x="0.0" y="180" width="375" height="487"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -177,7 +177,7 @@
                             <constraint firstItem="JHo-A0-6dG" firstAttribute="leading" secondItem="vHu-r0-HH8" secondAttribute="leading" id="TBY-ri-lf4"/>
                             <constraint firstItem="mnU-hU-ZpW" firstAttribute="leading" secondItem="vHu-r0-HH8" secondAttribute="leading" id="XG1-vv-xUv"/>
                             <constraint firstItem="mnU-hU-ZpW" firstAttribute="top" secondItem="vHu-r0-HH8" secondAttribute="top" id="Yod-NN-2w3"/>
-                            <constraint firstItem="JHo-A0-6dG" firstAttribute="top" secondItem="mnU-hU-ZpW" secondAttribute="bottom" constant="30" id="beg-wi-xtH"/>
+                            <constraint firstItem="JHo-A0-6dG" firstAttribute="top" secondItem="mnU-hU-ZpW" secondAttribute="bottom" constant="15" id="beg-wi-xtH"/>
                             <constraint firstItem="vHu-r0-HH8" firstAttribute="bottom" secondItem="JHo-A0-6dG" secondAttribute="bottom" id="ity-9Z-vMN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vHu-r0-HH8"/>
