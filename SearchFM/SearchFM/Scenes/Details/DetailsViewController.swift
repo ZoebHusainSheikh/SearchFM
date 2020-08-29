@@ -9,12 +9,6 @@ import UIKit
 import SDWebImage
 import WebKit
 
-protocol DetailsDisplayLogic: class
-{
-    func displayDetails(viewModel: Details.Fetch.ViewModel)
-    func stopAnimation()
-}
-
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
@@ -23,7 +17,6 @@ class DetailsViewController: UIViewController {
     
     var record: Record?
     var interactor: DetailsBusinessLogic?
-    var router: (NSObjectProtocol & DetailsRoutingLogic & DetailsDataPassing)?
 
     // MARK: Object lifecycle
     
@@ -45,14 +38,7 @@ class DetailsViewController: UIViewController {
     {
         let viewController = self
         let interactor = DetailsInteractor()
-        let presenter = DetailsPresenter()
-        let router = DetailsRouter()
         viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
     }
     
     // MARK: View lifecycle
@@ -78,18 +64,5 @@ private extension DetailsViewController {
             webView.load(URLRequest(url: url))
         }
     }
-    
-}
-
-extension DetailsViewController: DetailsDisplayLogic {
-    func displayDetails(viewModel: Details.Fetch.ViewModel) {
-        
-        //Display details from API
-    }
-    
-    func stopAnimation() {
-        dismissProgressHUD()
-    }
-    
     
 }

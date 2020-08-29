@@ -10,30 +10,10 @@ import UIKit
 
 protocol DetailsBusinessLogic
 {
-    func fetchDetails(request: Details.Fetch.Request)
     var record: Record? { get set }
 }
 
-protocol DetailsDataStore
+class DetailsInteractor: DetailsBusinessLogic
 {
-    var record: Record? { get set }
-}
-
-class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore
-{
-    var presenter: DetailsPresentationLogic?
-    var worker: DetailsWorker?
     var record: Record?
-    
-    // MARK: Fetch Record Details
-    
-    func fetchDetails(request: Details.Fetch.Request)
-    {
-        worker = DetailsWorker()
-        worker?.getDetail(request: request, { (status, apiResponse) in
-            
-            let response = Details.Fetch.Response(data: apiResponse as? Data)
-            self.presenter?.presentDetails(response: response)
-        })
-    }
 }
