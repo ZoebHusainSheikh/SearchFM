@@ -41,7 +41,7 @@ enum Search
         }
         struct ViewModel
         {
-            var records: [Record]?
+            var results: Results?
         }
     }
 }
@@ -58,11 +58,15 @@ extension SearchResponse {
 
 class Results: NSObject, Codable {
     var artistMatches: ArtistMatches?
+    var albumMatches: AlbumMatches?
+    var trackMatches: TrackMatches?
 }
 
 extension Results {
     enum CodingKeys: String, CodingKey {
         case artistMatches = "artistmatches"
+        case albumMatches = "albummatches"
+        case trackMatches = "trackmatches"
     }
 }
 
@@ -73,6 +77,26 @@ class ArtistMatches: NSObject, Codable {
 extension ArtistMatches {
     enum CodingKeys: String, CodingKey {
         case artists = "artist"
+    }
+}
+
+class AlbumMatches: NSObject, Codable {
+    var albums: [Record]?
+}
+
+extension AlbumMatches {
+    enum CodingKeys: String, CodingKey {
+        case albums = "album"
+    }
+}
+
+class TrackMatches: NSObject, Codable {
+    var tracks: [Record]?
+}
+
+extension TrackMatches {
+    enum CodingKeys: String, CodingKey {
+        case tracks = "track"
     }
 }
 

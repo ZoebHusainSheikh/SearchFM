@@ -21,7 +21,7 @@ class SearchViewController: UIViewController {
     
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
-    var viewModel: Search.Fetch.ViewModel?
+    var records: [Record]?
     
     
     struct SearchConstants {
@@ -64,7 +64,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
     }
-    
 }
 
 private extension SearchViewController {
@@ -77,10 +76,13 @@ private extension SearchViewController {
 
 private extension SearchViewController {
     
-    func performSearchAction() {
+    var searchTab: SearchType {
         let selectedTabIndex = segmentControl.selectedSegmentIndex
-        let type: SearchType = SearchType(rawValue: selectedTabIndex) ?? .artist
-        performSearchAPI(with: type)
+        return SearchType(rawValue: selectedTabIndex) ?? .artist
+    }
+    
+    func performSearchAction() {
+        performSearchAPI(with: searchTab)
     }
     
     // MARK: Search API
@@ -105,7 +107,16 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: SearchDisplayLogic {
     
     func display(viewModel: Search.Fetch.ViewModel) {
-        self.viewModel = viewModel
+        switch searchTab {
+        case .artist:
+            self.records = viewModel.results?.artistMatches?.artists
+        case .album:
+            self.records = viewModel.results?.albumMatches?.albums
+        case .track:
+            self.records = viewModel.results?.trackMatches?.tracks
+        }
+        
+        
         DispatchQueue.main.async {
             self.tableView.isHidden = false
             self.tableView.reloadData()
@@ -121,11 +132,11 @@ extension SearchViewController: SearchDisplayLogic {
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.records?.count ?? 0
+        return self.records?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let records = self.viewModel?.records, records.count > indexPath.row else {
+        guard let records = self.records, records.count > indexPath.row else {
             return UITableViewCell()
         }
         
@@ -137,7 +148,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let records = self.viewModel?.records, records.count > indexPath.row else { return }
+        guard let records = self.records, records.count > indexPath.row else { return }
         
         interactor?.record = records[indexPath.row]
         router?.routeToDetails()

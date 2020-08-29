@@ -27,8 +27,8 @@ class SearchPresenter: SearchPresentationLogic
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(SearchResponse.self, from:
                     dataResponse) //Decode JSON Response Data
-                let records = model.results?.artistMatches?.artists
-                self.viewController?.display(viewModel: Search.Fetch.ViewModel(records: records))
+                let results = model.results
+                self.viewController?.display(viewModel: Search.Fetch.ViewModel(results: results))
                 self.viewController?.stopAnimation()
             } catch let parsingError {
                 print("Error", parsingError)
