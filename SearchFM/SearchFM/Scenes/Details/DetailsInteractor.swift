@@ -25,10 +25,6 @@ class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore
     var worker: DetailsWorker?
     var record: Record?
     
-    init() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshRecord), name: Notification.Name("RefreshRecords"), object: nil)
-    }
-    
     // MARK: Fetch Record Details
     
     func fetchDetails(request: Details.Fetch.Request)
@@ -39,9 +35,5 @@ class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore
             let response = Details.Fetch.Response(data: apiResponse as? Data)
             self.presenter?.presentDetails(response: response)
         })
-    }
-    
-    @objc func refreshRecord() {
-        self.presenter?.refreshDetails()
     }
 }

@@ -25,26 +25,24 @@ class SearchRouter: NSObject, SearchRoutingLogic, SearchDataPassing
     
     // MARK: Routing
     
-    func routeToDetails()
-    {
+    func routeToDetails() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: DetailsViewController.className) as! DetailsViewController
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataToDetails(source: dataStore!, destination: &destinationDS)
-        navigateToDetails(source: viewController!, destination: destinationVC)
+        if var destinationDS = destinationVC.router?.dataStore {
+            passDataToDetails(source: dataStore!, destination: &destinationDS)
+            navigateToDetails(source: viewController!, destination: destinationVC)
+        }
     }
     
     // MARK: Navigation
     
-    func navigateToDetails(source: SearchViewController, destination: DetailsViewController)
-    {
+    func navigateToDetails(source: SearchViewController, destination: DetailsViewController) {
         source.show(destination, sender: nil)
     }
     
     // MARK: Passing data
     
-    func passDataToDetails(source: SearchDataStore, destination: inout DetailsDataStore)
-    {
+    func passDataToDetails(source: SearchDataStore, destination: inout DetailsDataStore) {
         destination.record = source.record
     }
 }

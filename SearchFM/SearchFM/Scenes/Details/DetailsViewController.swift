@@ -6,33 +6,90 @@
 //
 
 import UIKit
+import SDWebImage
+import WebKit
 
 protocol DetailsDisplayLogic: class
 {
     func displayDetails(viewModel: Details.Fetch.ViewModel)
     func stopAnimation()
-    func refreshDetails()
 }
 
 class DetailsViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var webView: WKWebView!
+    
+    var record: Record?
+    var interactor: DetailsBusinessLogic?
     var router: (NSObjectProtocol & DetailsRoutingLogic & DetailsDataPassing)?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
     }
-    */
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = DetailsInteractor()
+        let presenter = DetailsPresenter()
+        let router = DetailsRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initialiseView()
+    }
 
+}
+
+private extension DetailsViewController {
+    
+    func initialiseView() {
+        guard let record = interactor?.record else { return }
+        
+        nameLabel.text = record.name
+        if let url: URL = record.displayImageURL {
+            imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage"))
+        }
+        
+        if let urlPath = record.url, let url: URL = URL(string: urlPath) {
+            webView.load(URLRequest(url: url))
+        }
+    }
+    
+}
+
+extension DetailsViewController: DetailsDisplayLogic {
+    func displayDetails(viewModel: Details.Fetch.ViewModel) {
+        
+        //Display details from API
+    }
+    
+    func stopAnimation() {
+        dismissProgressHUD()
+    }
+    
+    
 }

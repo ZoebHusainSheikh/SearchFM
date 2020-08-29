@@ -11,7 +11,6 @@ import UIKit
 protocol DetailsPresentationLogic
 {
     func presentDetails(response: Details.Fetch.Response)
-    func refreshDetails()
 }
 
 class DetailsPresenter: DetailsPresentationLogic
@@ -41,9 +40,5 @@ class DetailsPresenter: DetailsPresentationLogic
                 self?.viewController?.stopAnimation()
             }
         }
-    }
-    
-    func refreshDetails() {
-        viewController?.refreshDetails()
     }
 }
