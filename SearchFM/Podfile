@@ -6,6 +6,7 @@ target 'SearchFM' do
   use_frameworks!
 
   # Pods for SearchFM
+    pod 'SDWebImage'
 
   target 'SearchFMTests' do
     inherit! :search_paths
