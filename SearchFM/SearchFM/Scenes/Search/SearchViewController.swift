@@ -121,6 +121,7 @@ extension SearchViewController: SearchDisplayLogic {
         DispatchQueue.main.async {
             self.tableView.isHidden = false
             self.tableView.reloadData()
+            self.view.endEditing(true)
         }
     }
     

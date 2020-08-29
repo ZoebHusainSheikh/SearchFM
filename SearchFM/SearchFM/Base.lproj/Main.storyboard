@@ -78,11 +78,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="1Wb-73-aPC" secondAttribute="trailing" constant="15" id="BwM-RK-7pj"/>
+                                                <constraint firstItem="Tt5-Zg-VNe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hCk-C7-6bn" secondAttribute="top" constant="15" id="N3s-6s-ckA"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Tt5-Zg-VNe" secondAttribute="bottom" constant="15" id="dgM-Tv-BzH"/>
                                                 <constraint firstItem="Tt5-Zg-VNe" firstAttribute="leading" secondItem="hCk-C7-6bn" secondAttribute="leading" constant="15" id="grC-ZL-gcr"/>
                                                 <constraint firstItem="1Wb-73-aPC" firstAttribute="top" secondItem="hCk-C7-6bn" secondAttribute="top" constant="10" id="jXN-Rl-Ui9"/>
                                                 <constraint firstAttribute="bottom" secondItem="1Wb-73-aPC" secondAttribute="bottom" constant="10" id="l4i-3w-eXU"/>
                                                 <constraint firstItem="1Wb-73-aPC" firstAttribute="leading" secondItem="Tt5-Zg-VNe" secondAttribute="trailing" constant="15" id="lPK-xO-cjJ"/>
-                                                <constraint firstItem="Tt5-Zg-VNe" firstAttribute="centerY" secondItem="hCk-C7-6bn" secondAttribute="centerY" id="tjO-hr-hlq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
