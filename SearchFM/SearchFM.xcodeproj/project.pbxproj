@@ -14,6 +14,8 @@
 		1F70CC7124FA294D00D1A3E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F70CC7024FA294D00D1A3E5 /* Assets.xcassets */; };
 		1F70CC7424FA294D00D1A3E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F70CC7224FA294D00D1A3E5 /* LaunchScreen.storyboard */; };
 		1F70CC7F24FA294D00D1A3E5 /* SearchFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CC7E24FA294D00D1A3E5 /* SearchFMTests.swift */; };
+		1F70CC8B24FA2D2B00D1A3E5 /* NetworkHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CC8A24FA2D2B00D1A3E5 /* NetworkHttpClient.swift */; };
+		1F70CC8F24FA2E0F00D1A3E5 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70CC8E24FA2E0F00D1A3E5 /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		1F70CC7A24FA294D00D1A3E5 /* SearchFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70CC7E24FA294D00D1A3E5 /* SearchFMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFMTests.swift; sourceTree = "<group>"; };
 		1F70CC8024FA294D00D1A3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F70CC8A24FA2D2B00D1A3E5 /* NetworkHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHttpClient.swift; sourceTree = "<group>"; };
+		1F70CC8E24FA2E0F00D1A3E5 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,9 @@
 				1F70CC6724FA294A00D1A3E5 /* AppDelegate.swift */,
 				1F70CC6924FA294A00D1A3E5 /* SceneDelegate.swift */,
 				1F70CC6B24FA294A00D1A3E5 /* ViewController.swift */,
+				1F70CC8924FA2D2B00D1A3E5 /* NetworkManager */,
+				1F70CC8D24FA2DE700D1A3E5 /* Scenes */,
+				1F70CC8C24FA2DD000D1A3E5 /* Utilities */,
 				1F70CC6D24FA294A00D1A3E5 /* Main.storyboard */,
 				1F70CC7024FA294D00D1A3E5 /* Assets.xcassets */,
 				1F70CC7224FA294D00D1A3E5 /* LaunchScreen.storyboard */,
@@ -97,6 +104,29 @@
 				1F70CC8024FA294D00D1A3E5 /* Info.plist */,
 			);
 			path = SearchFMTests;
+			sourceTree = "<group>";
+		};
+		1F70CC8924FA2D2B00D1A3E5 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				1F70CC8A24FA2D2B00D1A3E5 /* NetworkHttpClient.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		1F70CC8C24FA2DD000D1A3E5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1F70CC8E24FA2E0F00D1A3E5 /* AlertViewController.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1F70CC8D24FA2DE700D1A3E5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +232,8 @@
 				1F70CC6C24FA294A00D1A3E5 /* ViewController.swift in Sources */,
 				1F70CC6824FA294A00D1A3E5 /* AppDelegate.swift in Sources */,
 				1F70CC6A24FA294A00D1A3E5 /* SceneDelegate.swift in Sources */,
+				1F70CC8F24FA2E0F00D1A3E5 /* AlertViewController.swift in Sources */,
+				1F70CC8B24FA2D2B00D1A3E5 /* NetworkHttpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
